@@ -1,0 +1,6 @@
+touch lab0-ls-lah.sh
+
+затем в файл вставить
+
+#!/bin/bash
+kubectl exec lab0-jupyter-776f959b7b-gb5w8 -- ls -lah /home/jovyan/.jupyter
