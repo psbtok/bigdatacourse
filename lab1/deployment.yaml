@@ -16,7 +16,11 @@ spec:
       - name: jupyter
         image: node03.st:5000/pyspark-hdfs-jupyter:popletaev-411994
         ports:
-        - containerPort: 8888
+        - containerPort: 8282
+        command: ["start-notebook.sh"]  # Specify the command to start the Jupyter application
+        args:
+        - "--NotebookApp.port=8282"  # Set Jupyter to listen on port 8282
+        - "--NotebookApp.token=21i7Tp36Of"  # Set Jupyter token to your password
         resources:
           requests:
             memory: "2Gi"

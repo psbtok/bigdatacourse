@@ -8,5 +8,6 @@ spec:
     jupyter: lab0
   ports:
   - protocol: TCP
-    port: 8888
-    targetPort: 8888
+    port: 80
+    targetPort: 8282  # Redirect requests to port 8282
+    nodePort: 30000  # Choose a NodePort for external access (example)
