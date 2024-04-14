@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab0-jupyter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      jupyter: lab0
+  template:
+    metadata:
+      labels:
+        jupyter: lab0
+    spec:
+      containers:
+      - name: jupyter
+        image: node03.st:5000/pyspark-hdfs-jupyter:popletaev-411994
+        ports:
+        - containerPort: 8888
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
