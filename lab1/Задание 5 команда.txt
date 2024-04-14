@@ -1,0 +1,1 @@
+kubectl logs lab0-jupyter-776f959b7b-gb5w8 --timestamps > lab0-jupyter.log
