@@ -13,7 +13,7 @@ spec:
         jupyter: lab0
     spec:
       containers:
-      - name: jupyter
+      - name: jupyterlab0-jupyter.yaml 
         image: node03.st:5000/pyspark-hdfs-jupyter:popletaev-411994
         ports:
         - containerPort: 8282
